@@ -1,0 +1,360 @@
+/* Eléments principaux de la page */
+
+@font-face {
+    font-family: 'PoliceTeletubbies';
+    src: url('font/SoftMarshmallow/SoftMarshmallow.otf');
+}
+
+html
+{
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	height: 100%;
+	scroll-behavior: smooth; /*pour une transition douce*/
+}
+
+/*Pour cacher la barre de défilement (Chrome)*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+body
+{
+    font-family: 'PoliceTeletubbies', 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+	margin: 0;
+	height: 100%;
+	width: 100%;	
+} 
+
+strong
+{
+	color: #ebb819;
+}
+
+#fond
+{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	
+	background: url('images/teletubbies-01.webp');
+	
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#bloc_page
+{
+	width: 100%;
+	height: 100%;
+}
+
+/* Header */
+header
+{
+	position: fixed;
+	background-color: #1a3314;
+	width: 100%;
+	/*height: 80px;*/
+	color: #98ab43;
+	display: flex;
+	justify-content: center;
+	z-index: 11; /*pour mettre au 1er plan, le numéro le plus grand*/
+}
+
+#banniere
+{
+	display: flex;
+	justify-content: center;
+}
+
+#banniere img
+{
+	height: 100%;
+}
+
+
+/* Corps */
+
+#section_pres
+{
+	height: 100%;
+	
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 12;
+}
+
+#section_pres a
+{
+	align-self: flex-start;
+	color : black;
+}
+
+.parchemin_pres
+{
+	background-image: url('images/Logo/soleil.png');
+	/* Center and scale the image nicely */
+  background-position: center;
+  background-size: 100% 100%;
+	background-repeat: no-repeat;
+  padding: 2em 2em;
+  
+	
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 25%;
+	min-height: 200px;
+	z-index: 12;
+}
+
+.parchemin_pres h2
+{
+	font-size: 1.5vw;
+	font-family: 'PoliceTeletubbies';
+	text-align: center;
+	
+}
+
+#section_membres
+{
+	height: 100%;
+
+  
+	display: flex;
+	justify-content: center;
+}
+
+#fond_membres
+{
+	z-index: 8;
+	width: 85%;
+	height: 100%;
+	z-index: 0;
+	position : absolute;
+}
+
+#logo
+{	
+	height: 250px;
+	
+	display: flex;
+	justify-content: center;
+	align-self: flex-end;
+	
+}
+
+#logo img:hover
+{
+	transform: scale(1.1);
+	z-index: 10;
+}
+
+#logo img
+{
+    height: 100%;
+    
+	z-index: 10;
+	
+	transition: transform .3s; /* Animation */
+}
+
+h2
+{
+	position: relative;
+}
+
+#teletubbies
+{
+	/*z-index: 9;
+	height: 280px;
+	left: 50%;
+	margin: 150px -220px;
+	position: absolute;
+	bottom: -40px;*/
+	
+	height: 280px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -80px;
+	margin-left: -210px;
+}
+
+#teletubbies img
+{
+    height: 100%;
+    
+	z-index: 10;
+	
+	transition: transform .3s; /* Animation */
+}
+
+footer p
+{
+	z-index: 12;
+  margin-top: 200px;
+  text-align: center;
+  position: relative;
+  color: white;
+  font-size: 1.7vw;
+}
+
+footer a 
+{
+	color: white;
+}
+	
+/* Boutons */
+
+#membres
+{
+	width: 80%;
+	height: 85%;
+	background-image: url('images/Logo/nuage_seul_sans_fond.png');
+	background-size: 100% 100%;
+	z-index: 1;
+	padding-bottom: 200px;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	font-size: 1.4vw;
+	text-align: center;
+}
+
+#membres h2
+{
+	margin-top: 16%;
+}
+
+#membres p
+{
+	width: 60%;
+}
+
+#logo:nth-child(2) /* On prend le deuxième bloc élément */
+{
+    /*background-color: blue;
+    align-self: flex-start; /* Seul ce bloc sera aligné à la fin */
+}
+
+#multiculturalisme
+{
+	color: #4d2e79;
+}
+
+#internationaux
+{
+	color: #c1293c;
+}
+
+#monde
+{
+	color: #cad350;
+}
+
+/*TEXTE FLOTTANT*/
+#texte_flottant
+{
+	z-index: 9;
+	width: 300px;
+	height: 300px;
+	left: 50%;
+	margin: -150px -165px;
+	position: absolute;
+	bottom: -40px;
+}
+
+#texte_flottant h1{
+  font-size:2em;
+  color : white;
+  text-align: center;
+  
+  -webkit-animation: floating-text 2s ease alternate infinite;
+     -moz-animation: floating-text 2s ease alternate infinite;
+      -ms-animation: floating-text 2s ease alternate infinite;
+       -o-animation: floating-text 2s ease alternate infinite;
+          animation: floating-text 2s ease alternate infinite;
+}
+
+@-webkit-keyframes floating-text {
+  0% {  
+    -webkit-transform: translateY(.1em);
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .3em .2em rgba(0,0,0,.3);
+
+  }
+  100% {
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .5em .5em rgba(0,0,0,.3);
+  }
+}
+@-moz-keyframes floating-text {
+  0% {  
+    -moz-transform: translateY(.1em);
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .3em .2em rgba(0,0,0,.3);
+
+  }
+  100% {
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .5em .5em rgba(0,0,0,.3);
+  }
+}
+@-ms-keyframes floating-text {
+  0% {  
+    -ms-transform: translateY(.1em);
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .3em .2em rgba(0,0,0,.3);
+
+  }
+  100% {
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .5em .5em rgba(0,0,0,.3);
+  }
+}
+@-o-keyframes floating-text {
+  0% {  
+    -o-transform: translateY(.1em);
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .3em .2em rgba(0,0,0,.3);
+
+  }
+  100% {
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .5em .5em rgba(0,0,0,.3);
+  }
+}
+@keyframes floating-text {
+  0% {  
+    transform: translateY(.1em);
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .3em .2em rgba(0,0,0,.3);
+
+  }
+  100% {
+    text-shadow:0 0 .5em rgba(255,255,255,.4),
+      0 0 .2em rgba(0,0,0,.3),
+      0 .5em .5em rgba(0,0,0,.3);
+  }
+}
